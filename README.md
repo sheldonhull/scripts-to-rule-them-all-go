@@ -27,6 +27,13 @@ Normal tasks:
   For example, I'll add `asdf:install` to the `init` task and let it also ensure all apps I want are setup.
 - `devcontainer:build`: Locally run the steps to grab the image and build a local containerized devcontainer to work in.
 
+## You Want More?
+
+👉 Checkout [magetools](https://github.com/sheldonhull/magetools)
+
+I've been steadily baking automation tasks that are tested and reusable in there.
+Most of the tasks self-setup any tooling as well.
+
 ### Custom
 
 - `publish`: Focused on CI based publishing with a tool like `goreleaser` or `ko`.
