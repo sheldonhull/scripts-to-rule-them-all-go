@@ -7,7 +7,7 @@ require (
 	github.com/gosuri/uiprogress v0.0.1
 	github.com/magefile/mage v1.13.0
 	github.com/manifoldco/promptui v0.9.0
-	github.com/pterm/pterm v0.12.40
+	github.com/pterm/pterm v0.12.41
 	github.com/sheldonhull/magetools v0.0.9
 )
 
