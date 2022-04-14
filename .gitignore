@@ -13,3 +13,38 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Make sure .env doesn't get included, only .envrc for direnv based projects should get included.
+.env
+
+artifacts/
+tools
+.artifacts
+_artifacts
+
+# Exclude built binaries
+**/*/*.exe
+**/*/bin
+
+# cached outputs that shouldn't clear on each local build (temp kubeconfigs, reports, etc)
+.cache
+.cached
+
+# No secrets in this project!
+# Do not include secrets in the repo.
+**/*/id_rsa.pub
+**/*/id_rsa
+**/*/id_dsa.pub
+**/*/id_dsa
+**/*/*.pem
+
+# MacOS
+.DS_Store
+
+# For those using vscode local history, just for safety make sure this is always excluded - yes it got me before ;-)
+/.history/
+
+# magetools Exclude artifact directories magetools might use
+./artifacts
+# mage
+mage_output_file.go
