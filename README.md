@@ -48,19 +48,25 @@ Running `mage` in a brand new project.
 ⚡ Core Mage Tasks
 
 Targets:
-  clean              up after yourself.
-  go:doctor          🏥 Doctor will provide config details.
-  go:fmt             ✨ Fmt runs gofumpt.
-  go:init            ⚙️ Init runs all required steps to use this package.
-  go:lint            🔎 Run golangci-lint without fixing.
-  go:lintConfig      🏥 LintConfig will return output of golangci-lint config.
-  go:test            🧪 Run go test.
-  go:testSum         🧪 Run gotestsum (Params: Path just like you pass to go test, ie ./..., pkg/, etc ).
-  go:tidy            🧹 Tidy tidies.
-  go:wrap            ✨ Wrap runs golines powered by gofumpt.
-  init               runs multiple tasks to initialize all the requirements for running a project for a new contributor.
-  secrets:detect     🔐 Detect scans for secret violations with gitleaks without git consideration.
-  secrets:protect    🔐 Protect scans the staged artifacts for violations.
+  clean                  up after yourself.
+  gittools:init          ⚙️ Init runs all required steps to use this package.
+  go:doctor              🏥 Doctor will provide config details.
+  go:fix                 🔎 Run golangci-lint and apply any auto-fix.
+  go:fmt                 ✨ Fmt runs gofumpt.
+  go:init                ⚙️ Init runs all required steps to use this package.
+  go:lint                🔎 Run golangci-lint without fixing.
+  go:lintConfig          🏥 LintConfig will return output of golangci-lint config.
+  go:test                🧪 Run go test.
+  go:testSum             🧪 Run gotestsum (Params: Path just like you pass to go test, ie ./..., pkg/, etc ).
+  go:tidy                🧹 Tidy tidies.
+  go:wrap                ✨ Wrap runs golines powered by gofumpt.
+  init                   runs multiple tasks to initialize all the requirements for running a project for a new contributor.
+  precommit:commit       🧪 Commit runs pre-commit checks using pre-commit.
+  precommit:init         ⚙️ Init configures precommit hooks.
+  precommit:prepush      🧪 Push runs pre-push checks using pre-commit.
+  precommit:uninstall    ✖ Uninstall removes the pre-commit hooks.
+  secrets:detect         🔐 Detect scans for secret violations with gitleaks without git consideration.
+  secrets:protect        🔐 Protect scans the staged artifacts for violations.
 ```
 
 ## Template
