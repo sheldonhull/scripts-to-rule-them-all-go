@@ -10,12 +10,14 @@ import (
 	"github.com/pterm/pterm"
 	"github.com/sheldonhull/magetools/ci"
 	"github.com/sheldonhull/magetools/fancy"
-
 	"github.com/sheldonhull/magetools/tooling"
 
 	// mage:import
+	"github.com/sheldonhull/magetools/gittools"
+	// mage:import
 	"github.com/sheldonhull/magetools/gotools"
-
+	// mage:import
+	"github.com/sheldonhull/magetools/precommit"
 	//mage:import
 	_ "github.com/sheldonhull/magetools/secrets"
 )
@@ -45,12 +47,16 @@ func Init() error {
 	mg.SerialDeps(
 		Clean,
 		createDirectories,
+		(gotools.Go{}.Tidy),
 		(gotools.Go{}.Init),
-		tooling.SilentInstallTools(toolList),
+		(gittools.Gittools{}.Init),
+		(precommit.Precommit{}.Init),
 	)
-	// if err := (gotools.Go{}.Init()); err != nil {
-	// 	return err
-	// }
+	// mg.Deps()
+	pterm.DefaultSection.Println("Setup Project Specific Tools")
+	if err := tooling.SilentInstallTools(toolList); err != nil {
+		return err
+	}
 	return nil
 }
 
