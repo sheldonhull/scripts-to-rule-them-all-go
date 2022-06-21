@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/magefile/mage v1.13.0
-	github.com/pterm/pterm v0.12.41
+	github.com/pterm/pterm v0.12.42
 	github.com/sheldonhull/magetools v0.0.10
 )
 
