@@ -16,7 +16,6 @@
 
 # Make sure .env doesn't get included, only .envrc for direnv based projects should get included.
 .env
-
 artifacts/
 tools
 .artifacts
@@ -46,5 +45,7 @@ _artifacts
 
 # magetools Exclude artifact directories magetools might use
 ./artifacts
+./cache
+
 # mage
 mage_output_file.go

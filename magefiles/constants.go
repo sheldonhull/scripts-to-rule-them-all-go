@@ -8,11 +8,18 @@ package main
 // If not set, running mage will list available targets
 // var Default = Build.
 
-// artifactDirectory is a directory containing artifacts for the project and shouldn't be committed to source.
-const artifactDirectory = ".artifacts"
+const (
+	// artifactDirectory is a directory containing artifacts for the project and shouldn't be committed to source.
+	artifactDirectory = ".artifacts"
+	// cacheDirectory is a directory containing cached files that aren't specifically artifacts to keep discarding.
+	// For example, include a development kubeconfig for a project, templating files, ssh keys or other files.
+	cacheDirectory = ".cache"
+)
 
-// PermissionUserReadWriteExecute is the octal permission for read, write, & execute only for owner.
-permissionUserReadWriteExecute = 0o0700
 
-// permissionReadWriteSearchAll is the octal permission for all users to read, write, and search a file.
-permissionReadWriteSearchAll = 0o0777
+const (
+	// PermissionUserReadWriteExecute is the octal permission for read, write, & execute only for owner.
+	permissionUserReadWriteExecute = 0o0700
+	// permissionReadWriteSearchAll is the octal permission for all users to read, write, and search a file.
+	permissionReadWriteSearchAll = 0o0777
+)

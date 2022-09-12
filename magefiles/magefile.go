@@ -12,6 +12,9 @@ import (
 	"github.com/sheldonhull/magetools/fancy"
 	"github.com/sheldonhull/magetools/tooling"
 
+
+	// mage:import
+	"github.com/sheldonhull/magetools/docgen"
 	// mage:import
 	"github.com/sheldonhull/magetools/gittools"
 	// mage:import
@@ -22,12 +25,9 @@ import (
 	_ "github.com/sheldonhull/magetools/secrets"
 )
 
-// tools is a list of Go tools to install to avoid polluting global modules.
-// Gotools module already sets up most of the basic go tools.
-
-// createDirectories creates the local working directories for build artifacts and tooling.
+// 📁 createDirectories creates the local working directories for build artifacts and tooling.
 func createDirectories() error {
-	for _, dir := range []string{artifactDirectory} {
+	for _, dir := range []string{artifactDirectory,cacheDirectory} {
 		if err := os.MkdirAll(dir, permissionUserReadWriteExecute); err != nil {
 			pterm.Error.Printf("failed to create dir: [%s] with error: %v\n", dir, err)
 
@@ -39,7 +39,7 @@ func createDirectories() error {
 	return nil
 }
 
-// Init runs multiple tasks to initialize all the requirements for running a project for a new contributor.
+// ⚡ Init runs multiple tasks to initialize all the requirements for running a project for a new contributor.
 func Init() error {
 	fancy.IntroScreen(ci.IsCI())
 	pterm.Success.Println("running Init()...")
@@ -48,7 +48,7 @@ func Init() error {
 		Clean,
 		createDirectories,
 	)
-			
+
 	pterm.DefaultSection.Println("CI Tooling")
 	if err := tooling.SilentInstallTools(CIToolList); err != nil {
 		return err
@@ -65,7 +65,7 @@ func Init() error {
 		(gittools.Gittools{}.Init),
 		(precommit.Precommit{}.Init),
 	)
-	
+
 	pterm.DefaultSection.Println("Setup Project Specific Tools")
 	if err := tooling.SilentInstallTools(ToolList); err != nil {
 		return err
@@ -73,10 +73,10 @@ func Init() error {
 	return nil
 }
 
-// Clean up after yourself.
+// 🗑️ Clean up after yourself.
 func Clean() {
 	pterm.Success.Println("Cleaning...")
-	for _, dir := range []string{artifactDirectory} {
+	for _, dir := range []string{artifactDirectory,cacheDirectory} {
 		err := os.RemoveAll(dir)
 		if err != nil {
 			pterm.Error.Printf("failed to removeall: [%s] with error: %v\n", dir, err)
