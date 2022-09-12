@@ -47,14 +47,27 @@ func Init() error {
 	mg.SerialDeps(
 		Clean,
 		createDirectories,
+	)
+			
+	pterm.DefaultSection.Println("CI Tooling")
+	if err := tooling.SilentInstallTools(CIToolList); err != nil {
+		return err
+	}
+
+	if ci.IsCI() {
+		pterm.Success.Println("done with CI specific tooling. since detected in CI context, ending init early as core requirements met")
+		return nil
+	}
+
+	mg.SerialDeps(
 		(gotools.Go{}.Tidy),
 		(gotools.Go{}.Init),
 		(gittools.Gittools{}.Init),
 		(precommit.Precommit{}.Init),
 	)
-	// mg.Deps()
+	
 	pterm.DefaultSection.Println("Setup Project Specific Tools")
-	if err := tooling.SilentInstallTools(toolList); err != nil {
+	if err := tooling.SilentInstallTools(ToolList); err != nil {
 		return err
 	}
 	return nil
