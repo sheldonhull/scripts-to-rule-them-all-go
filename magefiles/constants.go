@@ -11,4 +11,8 @@ package main
 // artifactDirectory is a directory containing artifacts for the project and shouldn't be committed to source.
 const artifactDirectory = ".artifacts"
 
-const permissionUserReadWriteExecute = 0o0700
+// PermissionUserReadWriteExecute is the octal permission for read, write, & execute only for owner.
+permissionUserReadWriteExecute = 0o0700
+
+// permissionReadWriteSearchAll is the octal permission for all users to read, write, and search a file.
+permissionReadWriteSearchAll = 0o0777
