@@ -1,5 +1,3 @@
-//go:build mage
-
 // ⚡ Core Mage Tasks
 package main
 

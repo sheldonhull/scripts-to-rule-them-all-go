@@ -9,7 +9,6 @@ rules:
     min-spaces-from-content: 1
   comments-indentation: disable
 
-
 # For all rules
 ignore: |
   .markdownlint-cli2.yaml

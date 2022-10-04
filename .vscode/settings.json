@@ -10,5 +10,5 @@
     ],
     "build.experimentalWorkspaceModule": true, // to prevent issues with nested pulumi module.
     "build.expandWorkspaceToModule": true
-  },
+  }
 }

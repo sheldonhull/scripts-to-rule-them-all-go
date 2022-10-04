@@ -1,5 +1,3 @@
-//go:build mage
-
 package main
 
 // Since we are dealing with builds, having a constants file until using a config input makes it easy.

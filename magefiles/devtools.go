@@ -1,5 +1,3 @@
-//go:build mage
-
 package main
 
 // tools is a list of tools that are installed as binaries for development usage.

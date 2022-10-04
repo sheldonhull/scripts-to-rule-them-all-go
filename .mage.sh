@@ -8,4 +8,4 @@ if [ ! -f ".cache/bin/mage" ]; then
     go build -o .cache/bin/mage ./mage.go
 fi
 
-exec .cache/bin/mage -v $@
+exec .cache/bin/mage -v "$@"

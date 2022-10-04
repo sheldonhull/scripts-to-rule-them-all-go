@@ -23,6 +23,7 @@ Normal tasks:
 
 ### Included & Prebaked
 
+- Aqua: install project tooling with [aqua](https://aquaproj.github.io/docs/tutorial-basics/quick-start#install-aqua) and run `aqua install` to get tools setup.
 - `init`: All projects bootstrap from this. It runs go mod tidy, go installs, and is extended for any other tools as well.
   For example, I'll add `asdf:install` to the `init` task and let it also ensure all apps I want are setup.
 - `devcontainer:build`: Locally run the steps to grab the image and build a local containerized devcontainer to work in.
