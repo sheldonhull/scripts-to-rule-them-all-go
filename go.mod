@@ -3,7 +3,7 @@ module template.local
 go 1.18
 
 require (
-	github.com/magefile/mage v1.13.0
+	github.com/magefile/mage v1.14.0
 	github.com/pterm/pterm v0.12.49
 	github.com/sheldonhull/magetools v0.0.10
 )
