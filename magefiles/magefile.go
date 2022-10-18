@@ -14,13 +14,7 @@ import (
 	// mage:import
 	"github.com/sheldonhull/magetools/docgen"
 	// mage:import
-	"github.com/sheldonhull/magetools/gittools"
-	// mage:import
 	"github.com/sheldonhull/magetools/gotools"
-	// mage:import
-	"github.com/sheldonhull/magetools/precommit"
-	//mage:import
-	_ "github.com/sheldonhull/magetools/secrets"
 )
 
 // 📁 createDirectories creates the local working directories for build artifacts and tooling.
@@ -60,8 +54,6 @@ func Init() error {
 	mg.SerialDeps(
 		(gotools.Go{}.Tidy),
 		(gotools.Go{}.Init),
-		(gittools.Gittools{}.Init),
-		(precommit.Precommit{}.Init),
 	)
 
 	pterm.DefaultSection.Println("Setup Project Specific Tools")
