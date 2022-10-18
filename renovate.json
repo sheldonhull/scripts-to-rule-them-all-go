@@ -1,3 +1,113 @@
 {
-  "extends": ["config:base"]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        ":semanticCommitTypeAll(chore)",
+        "github>whitesource/merge-confidence:beta",
+        "github>aquaproj/aqua-renovate-config#1.2.6"
+    ],
+    "labels": [
+        "dependencies"
+    ],
+    "binarySource": "docker",
+    "semanticCommits": "enabled",
+    "pruneStaleBranches": true,
+    "rebaseWhen": "behind-base-branch",
+    "semanticCommitType": "chore",
+    "semanticCommitScope": "deps",
+    "platformAutomerge": true,
+    "automergeStrategy": "squash",
+    "unicodeEmoji": true,
+    "rangeStrategy": "pin",
+    "postUpdateOptions": [
+        "gomodTidy",
+        "gomodUpdateImportPaths"
+    ],
+    "onboardingPrTitle": "chore(deps): onboard with renovate",
+    "gomod": {
+        "enabled": true,
+        "commitMessageTopic": "⬆️ golang module {{depName}}"
+    },
+    "docker": {
+        "enabled": true,
+        "commitMessageTopic": "⬆️ docker update 🐳 {{depName}}"
+    },
+    "vulnerabilityAlerts": {
+        "enabled": true,
+        "labels": [
+            "security"
+        ]
+    },
+    "npm": {
+        "commitMessageTopic": "⬆️ npm update {{depName}}",
+        "fileMatch": [
+            "(^|/)package.json$"
+        ],
+        "rollbackPrs": true,
+        "versioning": "npm"
+    },
+    "terraform": {
+        "commitMessageTopic": "⬆️ terraform update {{depName}}",
+        "enabled": true
+    },
+    "packageRules": [
+        {
+            "matchPackagePatterns": [
+                "aws-sdk"
+            ],
+            "groupName": "aws-sdk"
+        },
+        {
+            "matchPaths": [
+                "magefiles"
+            ],
+            "groupName": "mage-tooling",
+            "groupName": "mage-tooling-magetools",
+            "automerge": true,
+            "automergeType": "branch"
+        },
+        {
+            "matchPaths": [
+                ".github"
+            ],
+            "groupName": "github-actions",
+            "automerge": true,
+            "automergeType": "branch",
+            "commitMessageTopic": "🤖 github actions {{depName}}"
+
+        },
+        {
+            "matchManagers": [
+                "npm"
+            ],
+            "matchDepTypes": [
+                "devDependencies"
+            ],
+            "enabled": true,
+            "groupName": "npm-devdependencies",
+            "stabilityDays": 5
+        },
+        {
+            "matchDatasources": [
+                "npm"
+            ],
+            "stabilityDays": 5
+        },
+        {
+            "description": "Opt-out minimum Go version updates: https://github.com/renovatebot/renovate/issues/16715",
+            "matchManagers": ["gomod"],
+            "matchDepTypes": ["golang"],
+            "enabled": false
+          },
+          {
+          "matchPaths": [
+              "aqua.yaml"
+          ],
+          "groupName": "aqua-packages",
+          "automerge": true,
+          "automergeType": "branch",
+          "commitMessageTopic": "🤖 aqua tooling"
+        },
+    ]
+
 }
