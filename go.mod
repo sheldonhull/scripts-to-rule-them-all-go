@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/magefile/mage v1.14.0
 	github.com/pterm/pterm v0.12.49
-	github.com/sheldonhull/magetools v0.0.14
+	github.com/sheldonhull/magetools v1.0.0
 )
 
 require golang.org/x/mod v0.5.1 // indirect
@@ -14,7 +14,6 @@ require (
 	atomicgo.dev/cursor v0.1.1 // indirect
 	atomicgo.dev/keyboard v0.2.8 // indirect
 	bitbucket.org/creachadair/shell v0.0.7 // indirect
-	github.com/atomicgo/cursor v0.0.1 // indirect
 	github.com/bitfield/script v0.20.2 // indirect
 	github.com/containerd/console v1.0.3 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
