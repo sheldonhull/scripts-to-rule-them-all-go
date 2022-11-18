@@ -10,16 +10,15 @@ import (
 	"github.com/sheldonhull/magetools/fancy"
 	"github.com/sheldonhull/magetools/tooling"
 
-
 	// mage:import
-	"github.com/sheldonhull/magetools/docgen"
+	_ "github.com/sheldonhull/magetools/docgen"
 	// mage:import
 	"github.com/sheldonhull/magetools/gotools"
 )
 
 // 📁 createDirectories creates the local working directories for build artifacts and tooling.
 func createDirectories() error {
-	for _, dir := range []string{artifactDirectory,cacheDirectory} {
+	for _, dir := range []string{artifactDirectory, cacheDirectory} {
 		if err := os.MkdirAll(dir, permissionUserReadWriteExecute); err != nil {
 			pterm.Error.Printf("failed to create dir: [%s] with error: %v\n", dir, err)
 
@@ -66,7 +65,7 @@ func Init() error {
 // 🗑️ Clean up after yourself.
 func Clean() {
 	pterm.Success.Println("Cleaning...")
-	for _, dir := range []string{artifactDirectory,cacheDirectory} {
+	for _, dir := range []string{artifactDirectory, cacheDirectory} {
 		err := os.RemoveAll(dir)
 		if err != nil {
 			pterm.Error.Printf("failed to removeall: [%s] with error: %v\n", dir, err)
