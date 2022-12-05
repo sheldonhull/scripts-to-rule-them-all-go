@@ -4,7 +4,7 @@
         "config:base",
         ":semanticCommitTypeAll(chore)",
         "github>whitesource/merge-confidence:beta",
-        "github>aquaproj/aqua-renovate-config#1.2.6"
+        "github>aquaproj/aqua-renovate-config#1.3.0"
     ],
     "labels": [
         "dependencies"
