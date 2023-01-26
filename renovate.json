@@ -62,7 +62,6 @@
                 "magefiles"
             ],
             "groupName": "mage-tooling",
-            "groupName": "mage-tooling-magetools",
             "automerge": true,
             "automergeType": "branch"
         },
