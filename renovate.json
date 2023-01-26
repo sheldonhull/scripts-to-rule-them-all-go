@@ -107,7 +107,6 @@
           "automerge": true,
           "automergeType": "branch",
           "commitMessageTopic": "🤖 aqua tooling"
-        },
+        }
     ]
-
 }
