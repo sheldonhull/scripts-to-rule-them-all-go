@@ -1,10 +1,12 @@
 module template.local
 
-go 1.19
+go 1.21
+
+toolchain go1.21.3
 
 require (
 	github.com/magefile/mage v1.15.0
-	github.com/pterm/pterm v0.12.66
+	github.com/pterm/pterm v0.12.69
 	github.com/sheldonhull/magetools v1.0.1
 )
 
