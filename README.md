@@ -85,33 +85,8 @@ You can use this as a template to get started with a project ready to run using 
 go install github.com/magefile/mage@latest
 ```
 
-### Zinit
-
-In your `.zshrc` or equivalent for [zinit](https://github.com/zdharma-continuum/zinit) plugins:
-
-Using sbin for shimming:
-
-```shell
-zinit ice as"null" lucid from"github-rel" \
-    mv"mage* -> mage"  \
-    extract'' \
-    lucid
-zinit load magefile/mage
-```
-
-Without sbin:
-
-```shell
-zinit ice as"null" lucid from"github-rel" \
-    mv"mage* -> mage"  \
-    extract'' \
-    lucid  \
-    sbin'mage'
-zinit load magefile/mage
-```
-
 ## Note
 
-Maintain `//go:build mage` to avoid impacting test coverage reports.
+Optional: maintain `//go:build mage` to avoid impacting test coverage reports.
 
 I've added this to the tags for language server build to recognize so you can use code completion.
