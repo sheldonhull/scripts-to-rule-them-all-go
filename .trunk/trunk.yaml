@@ -9,21 +9,26 @@ actions:
 version: 0.1
 runtimes:
   enabled:
-    - node@16.14.2
-    - python@3.10.3
+    - node@18.12.1
+    - python@3.10.8
     - go@1.19 # make sure this matches what's in go.mod for this to work correctly.
 cli:
   version: 1.21.0
 plugins:
   sources:
     - id: trunk
-      ref: v1.2.1
+      ref: v1.4.4
       uri: https://github.com/trunk-io/plugins
 lint:
   disabled:
     - goimports
     - gofmt
   enabled:
+    - checkov@3.2.38
+    - osv-scanner@1.6.2
+    - renovate@37.244.1
+    - trivy@0.49.1
+    - trufflehog@3.69.0
     - golines@0.12.2
     - actionlint@1.6.27
     - git-diff-check@SYSTEM
@@ -33,9 +38,9 @@ lint:
     - markdownlint@0.39.0
     - prettier@3.2.5
     - shellcheck@0.10.0
-    - shfmt@3.5.0
-    - taplo@release-taplo-0.13.0
-    - yamllint@1.28.0
+    - shfmt@3.6.0
+    - taplo@0.8.1
+    - yamllint@1.35.1
   threshold:
     - linters: [markdownlint]
       level: medium
@@ -65,3 +70,6 @@ lint:
   # - linters: [yamllint]
   #   paths:
   #     - .changes/unreleased/*.yaml
+tools:
+  enabled:
+    - gofumpt@0.5.0
