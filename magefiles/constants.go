@@ -14,7 +14,6 @@ const (
 	cacheDirectory = ".cache"
 )
 
-
 const (
 	// PermissionUserReadWriteExecute is the octal permission for read, write, & execute only for owner.
 	permissionUserReadWriteExecute = 0o0700

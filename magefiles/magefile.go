@@ -46,7 +46,9 @@ func Init() error {
 	}
 
 	if ci.IsCI() {
-		pterm.Success.Println("done with CI specific tooling. since detected in CI context, ending init early as core requirements met")
+		pterm.Success.Println(
+			"done with CI specific tooling. since detected in CI context, ending init early as core requirements met",
+		)
 		return nil
 	}
 
