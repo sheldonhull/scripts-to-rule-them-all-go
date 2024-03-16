@@ -1,0 +1,114 @@
+{
+  "checksums": [
+    {
+      "id": "github_release/github.com/goreleaser/goreleaser/v1.24.0/goreleaser_Darwin_all.tar.gz",
+      "checksum": "D45D3D736BAE267D74304B3AD933B3221DE8C8F76772EE2A0F8D6EFA5F039D8F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/goreleaser/goreleaser/v1.24.0/goreleaser_Linux_arm64.tar.gz",
+      "checksum": "A33003CBF71449A40DF6B771DA91E935435C6D6C0F31E63ECCADC4CFD384C276",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/goreleaser/goreleaser/v1.24.0/goreleaser_Linux_x86_64.tar.gz",
+      "checksum": "99709684E3F543ED32A771E1565055E43D2EC524E631BCD8D331C2D8ED6A584F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/goreleaser/goreleaser/v1.24.0/goreleaser_Windows_arm64.zip",
+      "checksum": "364718814E20816E3A5AF51783A6101731C3744C843AFA9590D8337BF46ACED8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/goreleaser/goreleaser/v1.24.0/goreleaser_Windows_x86_64.zip",
+      "checksum": "251BF38FC28E56736BE12192987C7925AA084998696DBA19E1EBA5570BCC8EB8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_Linux-64bit.tar.gz",
+      "checksum": "AF8FB0C72944EC6E31C5DD54E642083400157883602F4A89A692C4BA96EE1E66",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_Linux-ARM64.tar.gz",
+      "checksum": "914E3866931B0B13B8D4C569C6D29BE93BB6BA976B0F7797E3DAF1D6D9F55EB3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_Windows-64bit.zip",
+      "checksum": "62985AA44E178DC4AD8D1CC01431E7F527ECE96B3D9D7D30C8996CAA289D7205",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/magefile/mage/v1.15.0/mage_1.15.0_macOS-64bit.tar.gz",
+      "checksum": "DB2CD92FE42B6E2795D1B82D3A21A5F163F9965E3CB3845E7DE34F5F4C5B3C38",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/miniscruff/changie/v1.18.0/changie_1.18.0_darwin_amd64.tar.gz",
+      "checksum": "9D1884343E20B311E6CF8E36868B8026B725B5799BEE0D250FE4ACF29DD1FA79",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/miniscruff/changie/v1.18.0/changie_1.18.0_darwin_arm64.tar.gz",
+      "checksum": "1036665DFF3DBA08F82332D3CF43F42AF43BDFCC4D7DAD9B8500B80374A07A6B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/miniscruff/changie/v1.18.0/changie_1.18.0_linux_amd64.tar.gz",
+      "checksum": "EA104B9AC31DE58265BF8C688B763EA6CCE78C51635668086B85654378AFA690",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/miniscruff/changie/v1.18.0/changie_1.18.0_linux_arm64.tar.gz",
+      "checksum": "0E34987860C3A44489A43546C7DE9303D7B6E7B24E4E49192DCFB47B9E2FFC61",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/miniscruff/changie/v1.18.0/changie_1.18.0_windows_amd64.zip",
+      "checksum": "3236330DF06DEB418934650DBE516DD2D628BCDB7F4B6AC24ACD3AEDF7749F0D",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/miniscruff/changie/v1.18.0/changie_1.18.0_windows_arm64.zip",
+      "checksum": "E8E3155BE459B8729F4B60EA25F422462BBC4363B4770464B5597074BDA9A44B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/golang.org/dl/go1.22.1.darwin-amd64.tar.gz",
+      "checksum": "3BC971772F4712FEC0364F4BC3DE06AF22A00A12DAAB10B6F717FDCD13156CC0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/golang.org/dl/go1.22.1.darwin-arm64.tar.gz",
+      "checksum": "F6A9CEC6B8A002FCC9C0EE24EC04D67F430A52ABC3CFD613836986BCC00D8383",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/golang.org/dl/go1.22.1.linux-amd64.tar.gz",
+      "checksum": "AAB8E15785C997AE20F9C88422EE35D962C4562212BB0F879D052A35C8307C7F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/golang.org/dl/go1.22.1.linux-arm64.tar.gz",
+      "checksum": "E56685A245B6A0C592FC4A55F0B7803AF5B3F827AAA29FEAB1F40E491ACF35B8",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/golang.org/dl/go1.22.1.windows-amd64.zip",
+      "checksum": "CF9C66A208A106402A527F5B956269CA506CFE535FC388E828D249EA88ED28BA",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "http/golang.org/dl/go1.22.1.windows-arm64.zip",
+      "checksum": "85B8511B298C9F4199ECAE26AFAFCC3D46155BAC934D43F2357B9224BCAA310F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.153.0/registry.yaml",
+      "checksum": "966A151AB43B57574258FEA869745818B3D5A16BA436A5659E66106E96E14EC7",
+      "algorithm": "sha256"
+    }
+  ]
+}
