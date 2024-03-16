@@ -36,7 +36,6 @@ func getVersion() (releaseVersion, cleanPath string, err error) {
 // 📦 Bump the application as an interactive command, prompting for semver change type, merging changelog, and running format and git add.
 func (Changelog) Bump() error {
 	magetoolsutils.CheckPtermDebug()
-	configCILogger()
 	pterm.DefaultSection.Println("(Changelog) Bump()")
 	bumpType, _ := pterm.DefaultInteractiveSelect.
 		WithOptions([]string{"auto", "major"}).
