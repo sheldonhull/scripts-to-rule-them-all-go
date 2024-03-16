@@ -4,7 +4,7 @@ set -euo pipefail
 export MAGEFILE_CACHE="${PWD}/.cache/magefile"
 export GOFLAGS=""
 
-if [ ! -f ".cache/bin/mage" ]; then
+if [[ ! -f ".cache/bin/mage" ]]; then
     go build -o .cache/bin/mage ./mage.go
 fi
 
