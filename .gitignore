@@ -46,6 +46,7 @@ _artifacts
 # magetools Exclude artifact directories magetools might use
 ./artifacts
 ./cache
-
+./.artifacts
+./.cache
 # mage
 mage_output_file.go
