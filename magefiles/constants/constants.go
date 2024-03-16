@@ -20,3 +20,8 @@ const (
 	// PermissionReadWriteSearchAll is the octal permission for all users to read, write, and search a file.
 	PermissionReadWriteSearchAll = 0o0777
 )
+
+const (
+	// defaultTrunkBranch is set to the upstream default and hard coded cause it shouldn't ever change again with this repo.
+	DefaultTrunkBranch = "main"
+)
