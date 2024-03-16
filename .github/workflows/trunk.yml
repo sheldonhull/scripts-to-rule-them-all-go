@@ -1,0 +1,16 @@
+---
+name: lint
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call: # so composite actions can use this
+permissions:
+  pull-requests: write
+  checks: write
+  contents: read
+jobs:
+  lint:
+    uses: sheldonhull/github-workflows/.github/workflows/trunk.yml@main
+    secrets: inherit
