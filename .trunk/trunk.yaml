@@ -11,7 +11,7 @@ runtimes:
   enabled:
     - node@18.12.1
     - python@3.10.8
-    - go@1.19 # make sure this matches what's in go.mod for this to work correctly.
+    - go@1.22.1 # make sure this matches what's in go.mod for this to work correctly.
 cli:
   version: 1.21.0
 plugins:
