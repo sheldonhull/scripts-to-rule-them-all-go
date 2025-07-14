@@ -4,7 +4,7 @@ checksum:
   required: true
 registries:
   - type: standard
-    ref: v4.384.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v4.386.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - name: golang/go@go1.24.5
   - name: magefile/mage@v1.15.0
