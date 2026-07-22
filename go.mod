@@ -10,7 +10,7 @@ require (
 	github.com/sheldonhull/magetools v1.0.2
 )
 
-require golang.org/x/mod v0.32.0 // indirect
+require golang.org/x/mod v0.37.0 // indirect
 
 require (
 	atomicgo.dev/cursor v0.2.0 // indirect
@@ -29,6 +29,6 @@ require (
 	github.com/ztrue/tracerr v0.4.0 // indirect
 	golang.org/x/sys v0.44.0 // indirect
 	golang.org/x/term v0.40.0 // indirect
-	golang.org/x/text v0.34.0 // indirect
+	golang.org/x/text v0.39.0 // indirect
 	mvdan.cc/sh/v3 v3.7.0 // indirect
 )
