@@ -2,7 +2,7 @@ module template.local
 
 go 1.25.0
 
-toolchain go1.26.5
+toolchain go1.26.6
 
 require (
 	github.com/magefile/mage v1.17.2
