@@ -10,7 +10,7 @@ require (
 	github.com/sheldonhull/magetools v1.0.2
 )
 
-require golang.org/x/mod v0.37.0 // indirect
+require golang.org/x/mod v0.40.0 // indirect
 
 require (
 	atomicgo.dev/cursor v0.2.0 // indirect
