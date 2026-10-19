@@ -12,5 +12,5 @@ permissions:
   contents: read
 jobs:
   lint:
-    uses: sheldonhull/github-workflows/.github/workflows/trunk.yml@main
+    uses: sheldonhull/github-workflows/.github/workflows/trunk.yml@a66ffe3695e73068f50e8e2bd16d7fef48fb6876 # main
     secrets: inherit
